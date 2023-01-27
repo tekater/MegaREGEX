@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Первые примеры:");
         String regex1 = "\\w{1,}";
         if("abcdef".matches(regex1) == true) {
             System.out.println("abcdef=" + " " + "abcdef".matches(regex1));
@@ -16,6 +17,9 @@ public class Main {
         }else {
             System.out.println("false");
         }
+        
+        System.out.println(" ");
+        System.out.println("Вторые примеры:");
         String regex2 = "\\w{1,}\\s{0,}\\w{0,}\\s{0,}[=]{0,}\"{0,}[1-9]{0,}\"{0,}\\s{0,}[1-9;]{0,}";
         if("abc123xyz".matches(regex2) == true){
             System.out.println("abc123xyz=" + " " + "abc123xyz".matches(regex2));
@@ -32,6 +36,9 @@ public class Main {
         }else {
             System.out.println("false");
         }
+        
+        System.out.println(" ");
+        System.out.println("Третьи примеры:");
         String regex3 = "[\\w]{0,}[?]{0,}[=]{0,}[+]{0,}[.]$";
         if("cat.".matches(regex3) == true) {
             System.out.println("cat.=" + " " + "cat.".matches(regex3));
